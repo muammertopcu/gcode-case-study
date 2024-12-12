@@ -17,4 +17,5 @@ return [
     'edit' => 'Düzenle',
     'delete' => 'Sil',
     'are_you_sure' => 'Emin misiniz?',
+    'logout' => 'Çıkış',
 ];
