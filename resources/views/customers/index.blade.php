@@ -12,9 +12,9 @@
                 {{ __('messages.customers') }}
             </h2>
 
-            <x-primary-button :href="route('customers.create')">
+            <a href="{{ route('customers.create') }}" class=" text-gray-700 font-bold underline">
                 {{ __('messages.create_customer') }}
-            </x-primary-button>
+            </a>
         </div>
     </x-slot>
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
 use App\Models\Customer;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
@@ -27,7 +28,7 @@ class CustomerController extends Controller
      * Get the data for the resource.
      *
      */
-    public function data(StoreCustomerRequest $request): JsonResponse|View
+    public function data(Request $request): JsonResponse|View
     {
         if (!$request->ajax()) {
             return view('customers.index');
@@ -75,7 +76,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        //
+        return view('customers.create');
     }
 
     /**
@@ -83,7 +84,14 @@ class CustomerController extends Controller
      */
     public function store(StoreCustomerRequest $request)
     {
-        //
+        try {
+            Customer::query()->create($request->validated());
+
+            return redirect()->route('customers.index');
+
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()]);
+        }
     }
 
     /**

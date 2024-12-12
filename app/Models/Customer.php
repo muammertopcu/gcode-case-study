@@ -20,6 +20,22 @@ class Customer extends Model
         'address',
     ];
 
+    protected static function boot()
+    {
+        parent::boot();
+
+        if (auth()->check()) {
+            static::creating(function ($model) {
+                $model->created_by = auth()->id();
+                $model->updated_by = auth()->id();
+            });
+
+            static::updating(function ($model) {
+                $model->updated_by = auth()->id();
+            });
+        }
+    }
+
     public function createdBy(): BelongsTo
     {
         return $this->belongsTo(User::class, 'created_by');
