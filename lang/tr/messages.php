@@ -18,4 +18,5 @@ return [
     'delete' => 'Sil',
     'are_you_sure' => 'Emin misiniz?',
     'logout' => 'Çıkış',
+    'all' => 'Tümü',
 ];

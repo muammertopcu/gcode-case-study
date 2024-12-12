@@ -48,6 +48,10 @@
                         language: {
                             url: '//cdn.datatables.net/plug-ins/2.1.8/i18n/tr.json',
                         },
+                        aLengthMenu: [
+                            [10, 20, 30, 50, 100, -1],
+                            [10, 20, 30, 50, 100, "{{ __('messages.all') }}"]
+                        ],
                         columns: [
                             {data: 'code', className: 'text-xs  font-medium text-gray-900 tracking-wider'},
                             {data: 'name', className: 'text-xs  font-medium text-gray-900 tracking-wider'},

@@ -18,4 +18,5 @@ return [
     'delete' => 'Delete',
     'are_you_sure' => 'Are you sure?',
     'logout' => 'Logout',
+    'all' => 'All',
 ];
