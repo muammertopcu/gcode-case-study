@@ -16,7 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('customers.index')" :active="request()->routeIs('customers.index')">
-                        {{ __('messages.customers') }}
+                        {{ __('Customers') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('messages.logout') }}
+                                {{ __('Log out') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
@@ -70,7 +70,7 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('customers.index')" :active="request()->routeIs('customers.index')">
-                {{ __('messages.customers') }}
+                {{ __('Customers') }}
             </x-responsive-nav-link>
         </div>
 
@@ -89,7 +89,7 @@
                     <x-responsive-nav-link :href="route('logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
-                        {{ __('messages.logout') }}
+                        {{ __('Log out') }}
                     </x-responsive-nav-link>
                 </form>
             </div>

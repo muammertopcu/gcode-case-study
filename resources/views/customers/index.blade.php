@@ -9,11 +9,11 @@
     <x-slot name="header">
         <div class="flex w-full justify-between">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('messages.customers') }}
+                {{ __('Customers') }}
             </h2>
 
             <a href="{{ route('customers.create') }}" class=" text-gray-700 font-bold underline">
-                {{ __('messages.create_customer') }}
+                {{ __('Create Customer') }}
             </a>
         </div>
     </x-slot>
@@ -24,15 +24,15 @@
                 <table class="display" id="customers-table">
                     <thead>
                     <tr>
-                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('messages.customer_code') }}</th>
-                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('messages.customer_name') }}</th>
-                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('messages.address') }}</th>
-                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('messages.phone') }}</th>
-                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('messages.email') }}</th>
-                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('messages.created_by') }}</th>
-                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('messages.created_at') }}</th>
-                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('messages.updated_by') }}</th>
-                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('messages.updated_at') }}</th>
+                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('Customer Code') }}</th>
+                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('Customer Name') }}</th>
+                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('Address') }}</th>
+                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('Phone') }}</th>
+                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('Email') }}</th>
+                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('Created By') }}</th>
+                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('Created At') }}</th>
+                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('Updated By') }}</th>
+                        <th class="text-sm  font-medium text-gray-500 tracking-wider">{{ __('Updated At') }}</th>
                         <th></th>
                     </tr>
                     </thead>
@@ -50,7 +50,7 @@
                         },
                         aLengthMenu: [
                             [10, 20, 30, 50, 100, -1],
-                            [10, 20, 30, 50, 100, "{{ __('messages.all') }}"]
+                            [10, 20, 30, 50, 100, "{{ __('All') }}"]
                         ],
                         columns: [
                             {data: 'code', className: 'text-xs  font-medium text-gray-900 tracking-wider'},

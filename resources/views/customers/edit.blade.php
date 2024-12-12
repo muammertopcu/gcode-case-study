@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('messages.edit_customer') }}
+            {{ __('Edit Customer') }}
         </h2>
     </x-slot>
 
@@ -14,7 +14,7 @@
 
                     <div class="p-6 text-gray-900">
                         <div class="mb-3">
-                            <x-input-label for="code" :value="__('messages.customer_code')"/>
+                            <x-input-label for="code" :value="__('Customer Code')"/>
                             <x-text-input
                                 id="code"
                                 class="block mt-1 w-full"
@@ -28,28 +28,28 @@
                         </div>
 
                         <div class="mb-3">
-                            <x-input-label for="name" :value="__('messages.customer_name')"/>
+                            <x-input-label for="name" :value="__('Customer Name')"/>
                             <x-text-input id="name" class="block mt-1 w-full" type="text" name="name"
                                           :value="$customer->name" required/>
                             <x-input-error :messages="$errors->get('name')" class="mt-2"/>
                         </div>
 
                         <div class="mb-3">
-                            <x-input-label for="address" :value="__('messages.address')"/>
+                            <x-input-label for="address" :value="__('Address')"/>
                             <x-text-input id="address" class="block mt-1 w-full" type="text" name="address"
                                           :value="$customer->address" required/>
                             <x-input-error :messages="$errors->get('address')" class="mt-2"/>
                         </div>
 
                         <div class="mb-3">
-                            <x-input-label for="phone" :value="__('messages.phone')"/>
+                            <x-input-label for="phone" :value="__('Phone')"/>
                             <x-text-input id="phone" class="block mt-1 w-full" type="text" name="phone"
                                           :value="$customer->phone" required/>
                             <x-input-error :messages="$errors->get('phone')" class="mt-2"/>
                         </div>
 
                         <div class="mb-3">
-                            <x-input-label for="email" :value="__('messages.email')"/>
+                            <x-input-label for="email" :value="__('Email')"/>
                             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email"
                                           :value="$customer->email" required/>
                             <x-input-error :messages="$errors->get('email')" class="mt-2"/>
@@ -58,7 +58,7 @@
 
                     <div class="p-6 text-gray-900">
                         <x-primary-button>
-                            {{ __('messages.update') }}
+                            {{ __('Update') }}
                         </x-primary-button>
                     </div>
                 </form>
