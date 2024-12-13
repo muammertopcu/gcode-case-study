@@ -69,6 +69,8 @@ return [
     ],
     "unique" => ":attribute daha önceden kayıt edilmiş.",
     "url" => ":attribute biçimi geçersiz.",
+    "phone" => ":attribute geçerli bir telefon numarası olmalıdır.",
+
     /*
       |--------------------------------------------------------------------------
       | Custom Validation Language Lines
@@ -92,5 +94,6 @@ return [
      */
     'attributes' => [
         'code' => 'Müşteri Kodu',
+        'phone' => 'Telefon',
     ],
 ];
